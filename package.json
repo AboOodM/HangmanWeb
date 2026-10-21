@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": { "dev": "vite --host 0.0.0.0", "build": "vite build", "preview": "vite preview --host 0.0.0.0", "test": "node --test" },
+  "scripts": { "build:page": "node scripts/build-page.mjs", "predev": "npm run build:page", "dev": "vite --host 0.0.0.0", "build": "npm run build:page && vite build", "preview": "vite preview --host 0.0.0.0", "test": "node --test" },
   "devDependencies": { "vite": "^7.3.1" }
 }
